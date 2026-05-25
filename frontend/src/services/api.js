@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Base API URL - change this when deploying
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 /**
  * Axios instance with default config
