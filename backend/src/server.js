@@ -95,7 +95,9 @@ const connectDB = async () => {
   }
 };
 
-connectDB().then(() => {
+connectDB();
+
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`=====================================`);
     console.log(`  Fouz Ki Dukaan Server`);
@@ -103,6 +105,6 @@ connectDB().then(() => {
     console.log(`  Environment: ${process.env.NODE_ENV || "development"}`);
     console.log(`=====================================`);
   });
-});
+}
 
 export default app;
